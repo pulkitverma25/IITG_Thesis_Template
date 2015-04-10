@@ -34,33 +34,33 @@
 \usepackage{siunitx} %% for using degree symbol \ang{90} = 90degree {\si{\degree} gives the degree symbol}
 \usepackage[square, numbers, comma, sort&compress]{natbib}
 \usepackage{tabularx}
-\usepackage{Styles/lettrine}
-\usepackage{multicol,Styles/ltablex,Styles/supertabular,latexsym}
+\usepackage{lettrine}
+\usepackage{multicol,ltablex,supertabular,latexsym}
 \usepackage{amssymb,setspace,amsmath}
 \usepackage{pdflscape}
 \usepackage{url}
-\usepackage{Styles/multirow}
-\usepackage{Styles/threeparttable}
+\usepackage{multirow}
+\usepackage{threeparttable}
 \usepackage{graphics}
 \usepackage{epsfig}
 \usepackage{epstopdf}
 \usepackage{graphicx}
 \usepackage{array}
 \usepackage{longtable}
-\usepackage{Styles/rotfloat}
+\usepackage{rotfloat}
 \usepackage{textcomp}
-\usepackage{Styles/multirow}
+\usepackage{multirow}
 \usepackage[ american]{babel}
-\usepackage{Styles/comment}
+\usepackage{comment}
 
 %%
-\usepackage{Styles/morefloats}
+\usepackage{morefloats}
 \usepackage{verbatim}
-\usepackage{Styles/mathastext} %[LGRgreek]
+\usepackage{mathastext} %[LGRgreek]
 \usepackage{pdflscape}
-\usepackage{Styles/changepage}
-\usepackage{Styles/floatpag}
-\usepackage{Styles/extra_functions}
+\usepackage{changepage}
+\usepackage{floatpag}
+\usepackage{extra_functions}
 
 \hypersetup{urlcolor=black, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
 \title{\ttitle} % Defines the thesis title - don't touch this
@@ -105,7 +105,8 @@
 \newcommand{\thesisTitle}{Thesis Title}
 \newcommand{\authorName}{Author Name}
 \newcommand{\enrollmentNumber}{111111111}
-\newcommand{\supervisorName}{Supervisor Name}
+\newcommand{\supervisorTitle}{Dr.} %Eg: Prof. , Dr. , etc.
+\newcommand{\supervisorName}{Supervisor Name} %Do not add title with the name 
 \newcommand{\degreeName}{Degree Name}
 \newcommand{\departmentName}{Department Name}
 \newcommand{\studentType}{master's student} 
@@ -122,7 +123,7 @@
 {\bfseries \fontsize{18}{19}\selectfont{\thesisTitle}}\\[1.5cm]
 
 
-\large \textbf{A} \\ \textbf{Thesis Submitted} \\ \textbf{in Partial Fulfillment of the Requirements} \\ \textbf{for the Degree of} \\ \textbf{\expandafter\uppercase\expandafter{\degreeName}} \\ \textbf{By} \\ [1.5cm] \textbf{\expandafter\uppercase\expandafter{\authorName}}\\  \textbf{Under the Supervision of Prof. \expandafter\uppercase\expandafter{\supervisorName}} \\[1.5cm] % University requirement text
+\large \textbf{A} \\ \textbf{Thesis Submitted} \\ \textbf{in Partial Fulfillment of the Requirements} \\ \textbf{for the Degree of} \\ \textbf{\expandafter\uppercase\expandafter{\degreeName}} \\ \textbf{By} \\ [1.5cm] \textbf{\expandafter\uppercase\expandafter{\authorName}}\\  \textbf{Under the Supervision of \supervisorTitle \ \expandafter\uppercase\expandafter{\supervisorName}} \\[1.5cm] % University requirement text
 
 
 
@@ -159,7 +160,7 @@
 This is to certify that the thesis entitled ``\textbf{\thesisTitle}'',
 submitted by me to the \textit{Indian Institute of Technology Guwahati}, for the award of the degree of \degreeName, is a
 bonafide work carried out by me under the supervision
-of Prof. \supervisorName. The content of this thesis, in full or in parts, have not
+of \supervisorTitle \ \supervisorName. The content of this thesis, in full or in parts, have not
 been submitted to any other University or Institute for the award
 of any degree or diploma.
 
@@ -209,7 +210,7 @@ of any degree or diploma.
 
 \vspace{3cm}
 Signed:\\ \rule[1em]{25em}{0.5pt}\\[0.1cm] % This prints a line for the signature
-\textbf{Supervisor: \supervisorName}\\
+\textbf{Supervisor: \supervisorTitle \ \supervisorName}\\
 \textbf{\departmentName,}\\
 \textbf{Indian Institute of Technology Guwahati,}\\
 \textbf{Guwahati-781039, Assam, India.}\\[2cm] \hfill{}Date:\\ \rule[1em]{25em}{0.5pt} % This prints a line to write the date

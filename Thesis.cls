@@ -67,7 +67,7 @@
 \onehalfspacing
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{2.0ex plus0.5ex minus0.2ex}
-\usepackage{Styles/vmargin}
+\usepackage{vmargin}
 
 \RequirePackage[utf8]{inputenc} % Allows the use of international characters (e.g. Umlauts)
 
@@ -139,7 +139,7 @@
 \usepackage{booktabs}
 \usepackage{rotating}
 \usepackage{listings}
-\usepackage{Styles/lstpatch}
+\usepackage{lstpatch}
 \lstset{captionpos=b,
         frame=tb,
         basicstyle=\scriptsize\ttfamily,

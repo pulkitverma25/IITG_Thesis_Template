@@ -19,9 +19,11 @@ Currently it is hosted here: http://172.16.24.250/index.php?dir=Latex%20Miktek%2
 
 Note that this address may change in future.
 
-2. If any sty file is missing, you can download it and save in "Styles" directory and change its path in \usepackage command.
+2. If any sty file is missing, you can download it save it in directory where "IITG_Thesis.tex" is kept.
 
-3. The current contents of "Styles" directory are the files which were missing from my tex installation. Make changes accordingly for your system. 
+3. Some sty files can be found in "Missing_Styles" folder. They were missing from my tex installation.
 
 4. This is tested only on Linux platform.
+
+5. If you do not understand step 2 and 3 and you are getting an error regarding some .sty file missing, then copy the sontents of "Missing_Styles" directory into the directory where "IITG_Thesis.tex" is kept. It might solve the problem.
 
