@@ -1,0 +1,342 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IITG Thesis
+% LaTeX Template
+% Version 1.41 (22/08/14)
+% Prepared According to IITG-EEE Format by:
+% Gaurav Saxena
+%
+% Original authors:
+% Steven Gunn
+% http://users.ecsf.soton.ac.uk/srg/softwaretools/document/templates/
+% and
+% Sunil Patel
+% http://www.sunilpatel.co.uk/thesis-template/
+
+% Edited by:
+% Gaurav Saxena
+% 
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note:
+% Make sure to edit document variables in the THESIS DETAILS section in this file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, a4paper, twoside]{Thesis} % Paper size, default font size and one-sided paper
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc} %% for using degree symbol
+\usepackage{siunitx} %% for using degree symbol \ang{90} = 90degree {\si{\degree} gives the degree symbol}
+\usepackage[square, numbers, comma, sort&compress]{natbib}
+\usepackage{tabularx}
+\usepackage{Styles/lettrine}
+\usepackage{multicol,Styles/ltablex,Styles/supertabular,latexsym}
+\usepackage{amssymb,setspace,amsmath}
+\usepackage{pdflscape}
+\usepackage{url}
+\usepackage{Styles/multirow}
+\usepackage{Styles/threeparttable}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{Styles/rotfloat}
+\usepackage{textcomp}
+\usepackage{Styles/multirow}
+\usepackage[ american]{babel}
+\usepackage{Styles/comment}
+
+%%
+\usepackage{Styles/morefloats}
+\usepackage{verbatim}
+\usepackage{Styles/mathastext} %[LGRgreek]
+\usepackage{pdflscape}
+\usepackage{Styles/changepage}
+\usepackage{Styles/floatpag}
+\usepackage{Styles/extra_functions}
+
+\hypersetup{urlcolor=black, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+\title{\ttitle} % Defines the thesis title - don't touch this
+
+
+
+\makeatletter
+\renewcommand{\sfdefault}{lmss}
+\newcommand{\lyxmathsym}[1]{\ifmmode\begingroup\def\b@ld{bold}
+  \text{\ifx\math@version\b@ld\bfseries\fi#1}\endgroup\else#1\fi}
+%\newcommand{\degree}{\ensuremath{^\circ}}
+%%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+
+\def\hlinewd#1{%
+\noalign{\ifnum0=`}\fi\hrule \@height #1 %
+\futurelet\reserved@a\@xhline}
+
+\makeatother
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+%
+\setstretch{1.3} % Line spacing of 1.3
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+\rhead{\thepage} % Sets the right side header to show the page number
+\lhead{} % Clears the left side page header
+
+\pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+% PDF meta-data
+
+%----------------------------------------------------------------------------------------
+%	THESIS DETAILS
+%----------------------------------------------------------------------------------------
+\newcommand{\thesisTitle}{Thesis Title}
+\newcommand{\authorName}{Author Name}
+\newcommand{\enrollmentNumber}{111111111}
+\newcommand{\supervisorName}{Supervisor Name}
+\newcommand{\degreeName}{Degree Name}
+\newcommand{\departmentName}{Department Name}
+\newcommand{\studentType}{master's student} 
+%\newcommand{\studentType}{undergraduate student}
+%\newcommand{\studentType}{research scholar}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+\begin{center}
+
+{\bfseries \fontsize{18}{19}\selectfont{\thesisTitle}}\\[1.5cm]
+
+
+\large \textbf{A} \\ \textbf{Thesis Submitted} \\ \textbf{in Partial Fulfillment of the Requirements} \\ \textbf{for the Degree of} \\ \textbf{\expandafter\uppercase\expandafter{\degreeName}} \\ \textbf{By} \\ [1.5cm] \textbf{\expandafter\uppercase\expandafter{\authorName}}\\  \textbf{Under the Supervision of Prof. \expandafter\uppercase\expandafter{\supervisorName}} \\[1.5cm] % University requirement text
+
+
+
+\includegraphics[scale=0.4]{Images/iitglogo} \\ [3cm]
+
+
+
+\large \textbf{\departmentName} \\ \textbf{Indian Institute of Technology Guwahati} \\  \textbf{April, 2015}\\ [0.3cm]
+
+
+\end{center}
+
+
+
+\end{titlepage}
+
+
+\setstretch{1} %%% This will reduce the line spacing to 1
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%	BY YOU.
+%----------------------------------------------------------------------------------------
+\clearpage % Start a new page
+
+\pagestyle{empty} % Page style needs to be empty for this page
+
+\begin{titlepage}
+\begin{center}
+\textsc{\textbf{\fontsize{31}{32}\selectfont{Declaration}}}\\[2.0cm] % University name
+\end{center}
+
+ \vspace{0.5cm}
+
+This is to certify that the thesis entitled ``\textbf{\thesisTitle}'',
+submitted by me to the \textit{Indian Institute of Technology Guwahati}, for the award of the degree of \degreeName, is a
+bonafide work carried out by me under the supervision
+of Prof. \supervisorName. The content of this thesis, in full or in parts, have not
+been submitted to any other University or Institute for the award
+of any degree or diploma.
+
+\vspace{3cm}
+
+Signed:\\ \rule[1em]{25em}{0.5pt}\\[0.1cm] % This prints a line for the signature
+\textbf{\authorName}\\
+\textbf{\departmentName,}\\
+\textbf{Indian Institute of Technology Guwahati,}\\
+\textbf{Guwahati-781039, Assam, India.}\\[2cm] \hfill{}Date:\\ \rule[1em]{25em}{0.5pt} % This prints a line to write the date
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+%\clearpage % Start a new page
+%\begin{titlepage}
+%\pagestyle{empty} % Page style needs to be empty for this page
+
+% \input{Warehouse/Dedication}
+%\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%	BY YOUR GUIDE.
+%----------------------------------------------------------------------------------------
+\clearpage % Start a new page
+
+\pagestyle{empty} % Page style needs to be empty for this page
+
+\begin{titlepage}
+\begin{center}
+\textsc{\textbf{\fontsize{31}{32}\selectfont{Certificate}}}\\[2.0cm] % University name
+\end{center}
+
+ \vspace{0.5cm}
+
+This is to certify that the thesis entitled ``\textbf{\thesisTitle}'',
+submitted by \authorName \ (\enrollmentNumber), a \studentType \ in the \textit{\departmentName},
+\textit{Indian Institute of Technology Guwahati}, for the award of the degree of \degreeName, is a
+record of an original research work carried out by him under my supervision
+and guidance. The thesis has fulfilled all requirements as per the
+regulations of the institute and in my opinion has reached the standard
+needed for submission. The results embodied in this thesis have not
+been submitted to any other University or Institute for the award
+of any degree or diploma.
+
+\vspace{3cm}
+Signed:\\ \rule[1em]{25em}{0.5pt}\\[0.1cm] % This prints a line for the signature
+\textbf{Supervisor: \supervisorName}\\
+\textbf{\departmentName,}\\
+\textbf{Indian Institute of Technology Guwahati,}\\
+\textbf{Guwahati-781039, Assam, India.}\\[2cm] \hfill{}Date:\\ \rule[1em]{25em}{0.5pt} % This prints a line to write the date
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+%\clearpage % Start a new page
+\begin{titlepage}
+\begin{center}
+\textsc{\textbf{\fontsize{31}{32}\selectfont{Acknowledgements}}}\\[1.0cm] % University name
+\end{center}
+
+  \input{Warehouse/Acknowledgments}
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\setstretch{1.5} %% This line spacing will be used through-out the main text
+\begin{titlepage}
+\begin{center}
+
+\textsc{\textbf{\fontsize{31}{32}\selectfont{Abstract}}}\\[1.0cm] % University name
+
+\end{center}
+
+
+ \input{Warehouse/Abstract}
+
+\end{titlepage}
+\cleardoublepage{}
+\setstretch{1} %%% This will reduce the line spacing
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\pagestyle{fancy} % The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+
+\lhead{\emph{Contents}} % Set the left side page header to "Contents"
+\tableofcontents % Write out the Table of Contents
+
+\lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
+\listoffigures % Write out the List of Figures
+
+\lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
+\listoftables % Write out the List of Tables
+
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{fancy} % Return the page headers back to the "fancy" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+%
+\input{Chapters/Chapter01/Chapter01}
+\input{Chapters/Chapter02/Chapter02}
+%\input{Chapters/Chapter03/Chapter03}
+%\input{Chapters/Chapter04/Chapter04}
+%\input{Chapters/Chapter05/Chapter05}
+%\input{Chapters/Chapter06/Chapter06}
+
+%----------------------------------------------------------------------------------------
+%	APPENDICES
+%----------------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+
+\input{Appendices/AppendixA}
+%\input{Appendices/AppendixB}
+%\input{Appendices/AppendixC}
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\backmatter
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\cleardoublepage{}
+\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+\clearpage % Start a new page
+
+\label{Bibliography}
+\lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
+\setstretch{1}
+\bibliographystyle{Bibliography/IEEEtran}
+\bibliography{Bibliography/Bibliography.bib}
+
+
+
+%%%%------------------------------------------------------List of Publications--------------------------------------------------------------------
+\cleardoublepage{}
+\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+\clearpage % Start a new page
+
+\addtotoc{List of Publications}
+%\label{List of Publications}
+\lhead{\emph{List of Publications}} % Change the page header to say "Bibliography"
+\begin{center}
+
+\textsc{\textbf{\fontsize{24}{22}\selectfont{List of Publications}}}\\[1.0cm] % University name
+
+\end{center}
+
+\input{Warehouse/Publication}
+
+
+
+%%%%---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+\end{document}
