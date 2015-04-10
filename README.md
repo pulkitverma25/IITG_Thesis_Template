@@ -25,5 +25,5 @@ Note that this address may change in future.
 
 4. This is tested only on Linux platform.
 
-5. If you do not understand step 2 and 3 and you are getting an error regarding some .sty file missing, then copy the sontents of "Missing_Styles" directory into the directory where "IITG_Thesis.tex" is kept. It might solve the problem.
+5. If you do not understand step 1 and 2 and you are getting an error regarding some .sty file missing, then copy the contents of "Missing_Styles" directory into the directory where "IITG_Thesis.tex" is kept. It might solve the problem.
 
