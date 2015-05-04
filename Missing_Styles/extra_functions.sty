@@ -85,20 +85,23 @@
 
 \newcommand*{\chapnumfont}{%
 %   \usefont{T1}{\@defaultcnfont}{b}{n}\fontsize{100}{130}\selectfont%
-  \usefont{T1}{pbk}{b}{n}
-  \fontsize{150}{130}
+  %\usefont{T1}{pbk}{b}{n}
+  %\fontsize{150}{130}
   \selectfont
-  \color{chaptergrey}
+ % \color{chaptergrey}
 }
 \def\@makechapterhead#1{%
   \vspace*{50\p@}%
   {\parindent \z@ \raggedright \normalfont
-    {\chapnumfont\ifnum \c@secnumdepth >\m@ne
-%         \huge\bfseries \@chapapp\space \thechapter
-        \raggedleft\bfseries \thechapter
+    {\Huge 
+    	\ifnum \c@secnumdepth >\m@ne
+    	%{\bfseries Chapter}
+        \huge\bfseries \@chapapp\space \thechapter
+        \raggedleft\bfseries% \thechapter
         \par\nobreak
-        \vskip 20\p@
-    \fi}
+        %\vskip 20\p@
+    \fi
+    }
     \interlinepenalty\@M
     {\raggedleft\Huge \bfseries #1\par\nobreak}
     \vskip 40\p@
